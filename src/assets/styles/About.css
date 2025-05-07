@@ -1,0 +1,134 @@
+.about {
+  padding: 5rem 2rem;
+  background: #f5f7fa;
+  font-family: "Segoe UI", sans-serif;
+  color: #333;
+}
+
+.section-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #0d1117;
+  position: relative;
+}
+
+.about-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  gap: 1.5rem;
+}
+
+.profile-img {
+  width: 300px;
+  height: 415px;
+  border-radius: 1.5rem;
+  object-fit: cover;
+  border: none;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-intro {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.7;
+  max-width: 100%;
+}
+
+.cv-btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: #fff;
+  padding: 12px 24px;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0, 123, 255, 0.2);
+}
+
+.cv-btn:hover {
+  background: linear-gradient(135deg, #0056b3, #003f80);
+  transform: translateY(-2px);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  border-left: 4px solid transparent;
+}
+
+.about-card:hover {
+  transform: translateY(-5px);
+  border-left: 4px solid #007bff;
+}
+
+.about-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: #007bff;
+}
+
+.about-card p {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .about-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-intro {
+    text-align: center;
+  }
+}
+.about-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: start;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media (max-width: 992px) {
+  .about-wrapper {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .about-left,
+  .about-right {
+    text-align: center;
+    align-items: center;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+}

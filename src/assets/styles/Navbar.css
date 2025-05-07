@@ -1,0 +1,112 @@
+/* Navbar styles */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 999;
+  background-color: transparent;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+.navbar {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Home page navbar - white text */
+.navbar-home .nav-links a {
+  color: white;
+}
+
+.navbar-home .nav-links a.active {
+  border-bottom: 2px solid white;
+}
+
+/* Portfolio page navbar - black text */
+.navbar-portfolio .nav-links a {
+  color: black;
+}
+
+.navbar-portfolio .nav-links a.active {
+  border-bottom: 2px solid black;
+}
+
+.navbar.scrolled {
+  background-color: #222; /* Black background */
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  padding: 1rem 2rem;
+}
+.navbar.scrolled .nav-links li a {
+  color: #fff; /* White text color when scrolled */
+}
+.navbar.scrolled .nav-links li a.active {
+  color: #007bff; /* Blue text color for active link when scrolled */
+}
+.navbar .logo img {
+  height: 60px;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 1.8rem;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #000000;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a.active {
+  color: #007bff;
+  font-weight: 600;
+  border-bottom: 2px solid #007bff;
+}
+
+.nav-links li a:hover {
+  color: #007bff;
+}
+
+/* Responsive styles */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background: #333;
+  border-radius: 3px;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  .nav-links.active {
+    max-height: 300px;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+}

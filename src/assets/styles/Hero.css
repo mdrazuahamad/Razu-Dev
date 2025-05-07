@@ -1,0 +1,217 @@
+/* Full Hero Section */
+.hero {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Background Video */
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: 1;
+  filter: brightness(0.6);
+}
+
+/* Overlay Container for Hero Content */
+.hero-overlay {
+  width: 100%;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  color: #fff;
+  gap: 2rem;
+}
+
+/* Desktop (Side-by-side layout) */
+@media (min-width: 768px) {
+  .hero-overlay {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  .hero-content {
+    flex: 1;
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  .hero-image {
+    flex: 1;
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+/* Hero Content Styling */
+.hero-content {
+  max-width: 700px;
+  margin-left: 100px;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.typewriter {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #00ffd5;
+  display: block;
+  margin-bottom: 1rem;
+}
+.experience {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #ffffff;
+  margin-bottom: 2rem;
+}
+
+/* Call-to-action Button */
+.btn {
+  background-color: #001f3f; /* Cyan accent */
+  color: #ffffff; /* Navy blue text */
+  padding: 0.75rem 1.75rem;
+  border-radius: 0.5rem; /* Fully rounded pill */
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  box-shadow: 0 4px 10px #7373a1a9;
+  transition: all 0.3s ease;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.btn:hover {
+  background-color: #ffffff;
+  color: #0a0a0a; /* Almost black */
+  box-shadow: 0 6px 16px rgba(255, 255, 255, 0.747);
+  transform: translateY(-2px);
+  margin-bottom: 1rem;
+}
+/* Social Icons */
+.social-icons {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: left;
+}
+
+.social-icons a {
+  font-size: 1.5rem;
+  color: #ffffff;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #00ffd5;
+}
+
+/* Hero Image (Circular Center Image) */
+.hero-image {
+  max-width: 700px;
+  position: relative;
+  margin-top: 3rem;
+  justify-content: end;
+}
+
+.orbit-wrapper {
+  position: relative;
+  width: 660px;
+  height: 660px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.center-image {
+  width: 460px;
+  height: 460px;
+  background-color: #ffffffa8;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #ffffff;
+  box-shadow: 0 0 20px #ffffff;
+  z-index: 2;
+}
+
+.orbit-icons {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  animation: rotate 20s linear infinite;
+  transform-origin: center;
+  pointer-events: none; /* So hover only works on icons */
+}
+
+.orbit-icon {
+  font-size: 2rem;
+  color: #ffffff;
+  position: absolute;
+  transition: transform 0.3s ease;
+  pointer-events: auto;
+}
+.orbit-icons.paused {
+  animation-play-state: paused; /* Pauses animation when hovered */
+}
+/* Orbit Rotation Animation */
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.25rem;
+  }
+  .typewriter {
+    font-size: 1rem;
+  }
+  .orbit-wrapper {
+    width: 220px;
+    height: 220px;
+  }
+  .center-image {
+    width: 90px;
+    height: 90px;
+    top: 65px;
+    left: 65px;
+  }
+  .orbit-icon {
+    font-size: 1.25rem;
+  }
+}
