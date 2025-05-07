@@ -23,7 +23,7 @@ const About = () => {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}>
           <img
-            src='/public/avatars/MD Razu Ahamad 8.png'
+            src='/avatars/MD Razu Ahamad 8.png'
             alt='Razu Ahamad'
             className='profile-img'
           />
