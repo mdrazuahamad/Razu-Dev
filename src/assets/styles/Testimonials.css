@@ -14,14 +14,15 @@
 .testimonial-card {
   display: flex;
   justify-content: center;
+  padding: 20px;
 }
 
 .testimonial-content {
   background: #fff;
   padding: 30px;
-  max-width: 600px;
+  max-width: 400px;
   border-radius: 16px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease;
 }
 
@@ -31,8 +32,8 @@
 }
 
 .testimonial-avatar {
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   object-fit: cover;
   margin: 0 auto 20px;
@@ -63,4 +64,7 @@
   margin-top: 12px;
   color: #ffc107;
   font-size: 1.2rem;
+}
+.slick-dots {
+  bottom: -50px !important;
 }
