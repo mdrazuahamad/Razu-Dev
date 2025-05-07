@@ -59,9 +59,6 @@ const Portfolio = ({ showAll = false }) => {
               <a href={project.live} target='_blank' rel='noreferrer'>
                 Live
               </a>
-              <a href={project.github} target='_blank' rel='noreferrer'>
-                GitHub
-              </a>
             </div>
           </div>
         ))}
