@@ -105,7 +105,7 @@ const projects = [
     title: "Application Security Web App",
     category: "React",
     tech: ["ReactJs", "Tailwind CSS"],
-    image: "src/assets/images/2025-05-07_212204.png",
+    image: "/images/2025-05-07_202929.png",
     live: "https://maanrishfa.com/",
     github: "https://github.com/yourproject3",
   },
