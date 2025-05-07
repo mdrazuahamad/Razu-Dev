@@ -25,7 +25,7 @@ const Portfolio = ({ showAll = false }) => {
 
   const navigate = useNavigate();
   const loadMore = () => {
-    setVisibleCount((prev) => prev + 12);
+    setVisibleCount((prev) => prev + 16);
     setTimeout(() => {
       navigate("/portfolio");
     }, 100);
@@ -42,7 +42,7 @@ const Portfolio = ({ showAll = false }) => {
             className={`filter-btn ${filter === cat ? "active" : ""}`}
             onClick={() => {
               setFilter(cat);
-              setVisibleCount(8);
+              setVisibleCount(16);
             }}>
             {cat}
           </button>

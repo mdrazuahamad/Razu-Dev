@@ -4,7 +4,7 @@ export const testimonials = [
     name: "John Doe",
     message: "Razu did an excellent job on our website! Highly recommended.",
     rating: 5,
-    avatar: "../assets/avatars/MD Razu Ahamad 8.png",
+    avatar: "/assets/avatars/MD Razu Ahamad 8.png",
     title: "Founder, TechStart",
   },
   {
