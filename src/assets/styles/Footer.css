@@ -1,28 +1,40 @@
 .footer {
-  background-color: #0a0a0a;
+  background-color: #0f172a;
   color: #fff;
-  padding: 3rem 1rem 2rem;
-  font-family: "Segoe UI", sans-serif;
+  padding: 40px 20px 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .footer-container {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
   max-width: 1200px;
   margin: 0 auto;
-  gap: 2rem;
 }
 
 .footer-column {
-  flex: 1 1 1;
+  flex: 1 1 220px;
   min-width: 220px;
 }
 
 .footer-column h3 {
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
-  color: #00bcd4;
+  margin-bottom: 15px;
+  font-size: 18px;
+  padding-bottom: 8px;
+}
+
+.footer-role {
+  font-size: 14px;
+  color: #94a3b8;
+  margin-bottom: 10px;
+}
+
+.footer-description {
+  font-size: 13px;
+  color: #cbd5e1;
+  line-height: 1.6;
 }
 
 .footer-column ul {
@@ -32,57 +44,93 @@
 }
 
 .footer-column ul li {
-  margin-bottom: 0.7rem;
-  color: #ccc;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
+  margin-bottom: 10px;
 }
 
 .footer-column ul li a {
   text-decoration: none;
-  color: #ccc;
-  transition: color 0.3s;
+  color: #cbd5e1;
+  transition: color 0.3s ease;
 }
 
 .footer-column ul li a:hover {
-  color: #00bcd4;
+  color: #38bdf8;
+}
+
+.contact-info li {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  gap: 8px;
+  margin-bottom: 10px;
+  color: #cbd5e1;
 }
 
 .footer-socials a {
-  font-size: 1.5rem;
-  margin-right: 1rem;
-  color: #fff;
-  transition: transform 0.3s, color 0.3s;
+  display: inline-block;
+  margin-right: 12px;
+  font-size: 20px;
+  color: #cbd5e1;
+  transition: color 0.3s ease;
 }
 
 .footer-socials a:hover {
-  color: #00bcd4;
-  transform: scale(1.2);
+  color: #38bdf8;
+}
+
+hr {
+  max-width: 50px;
+  border: 0;
+  border-top: 1px solid #475569;
+  margin: 20px 0;
 }
 
 .footer-bottom {
   text-align: center;
-  color: #aaa;
-  font-size: 0.9rem;
-  margin-top: 2rem;
-  border-top: 1px solid #333;
-  padding-top: 1rem;
+  margin-top: 40px;
+  font-size: 13px;
+  color: #94a3b8;
+  border-top: 1px solid #334155;
+  padding-top: 15px;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
+/* Push Follow Me to right on large screens */
+@media (min-width: 1200px) {
   .footer-container {
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
   }
 
-  .footer-column {
-    min-width: unset;
+  .footer-column.follow {
+    grid-column: 4;
+    text-align: right;
   }
 
-  .footer-socials a {
-    margin-right: 0.7rem;
+  .footer-column.follow .footer-socials a {
+    margin-left: 12px;
+    margin-right: 0;
   }
 }
+
+/* Responsive adjustments for Follow Me */
+@media (max-width: 768px) {
+  .footer-column {
+    text-align: left;
+  }
+
+  .footer-column.follow {
+    text-align: left;
+    margin-top: 20px; /* Adds spacing to follow me on smaller screens */
+  }
+}
+
+/* Additional styling for better spacing of the Follow Me section */
+/* Fixing the horizontal rule (hr) position */
+.footer-column.follow hr {
+  max-width: 70px; /* Adjust hr length for better alignment with Follow Me */
+  margin: 20px 18px; /* Add margin to give it spacing */
+  border-top: 1px solid #475569; /* Make sure the hr has the same style */
+  margin-left: auto; /* Push the hr to the center of Follow Me section */
+}
+
+/* Ensure that Follow Me stays on the right and aligns properly */

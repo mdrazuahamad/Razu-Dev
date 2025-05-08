@@ -1,5 +1,5 @@
 import React from "react";
-import "../assets/styles/Footer.css"; // Adjust the path as necessary
+import "../assets/styles/Footer.css";
 import {
   FaGithub,
   FaLinkedin,
@@ -14,7 +14,18 @@ const Footer = () => {
       <div className='footer-container'>
         {/* Quick Links */}
         <div className='footer-column'>
+          <h3>MD Razu Ahamad</h3>
+          <p className='footer-role'>Web Developer & CMS Specialist</p>
+          <p className='footer-description'>
+            I am a passionate web developer with expertise in creating responsive and
+            user-friendly websites. I specialize in CMS development and have a keen eye
+            for design.
+          </p>
+        </div>
+        {/* Quick Links */}
+        <div className='footer-column'>
           <h3>Quick Links</h3>
+          <hr />
           <ul>
             <li>
               <a href='#projects'>Projects</a>
@@ -31,6 +42,7 @@ const Footer = () => {
         {/* Contact Info */}
         <div className='footer-column'>
           <h3>Contact Info</h3>
+          <hr />
           <ul className='contact-info'>
             <li>
               <FaEnvelope /> mdrazuahamad8@gmail.com
@@ -44,9 +56,10 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Social Links */}
-        <div className='footer-column'>
+        {/* Follow Me */}
+        <div className='footer-column follow'>
           <h3>Follow Me</h3>
+          <hr />
           <div className='footer-socials'>
             <a
               href='https://github.com/your-github'
@@ -60,12 +73,13 @@ const Footer = () => {
               rel='noopener noreferrer'>
               <FaLinkedin />
             </a>
-            <a href='mailto:your@email.com'>
+            <a href='mailto:mdrazuahamad8@gmail.com'>
               <FaEnvelope />
             </a>
           </div>
         </div>
       </div>
+
       <p className='footer-bottom'>
         © {new Date().getFullYear()} MD Razu Ahamad. All rights reserved.
       </p>

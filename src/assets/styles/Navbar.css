@@ -1,3 +1,10 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
 /* Navbar styles */
 .navbar {
   position: fixed;
@@ -12,6 +19,7 @@
   background-color: transparent;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
+
 .navbar {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
@@ -45,6 +53,7 @@
 .navbar.scrolled .nav-links li a.active {
   color: #007bff; /* Blue text color for active link when scrolled */
 }
+
 .navbar .logo img {
   height: 60px;
   cursor: pointer;
@@ -92,7 +101,6 @@
   .nav-links {
     position: absolute;
     top: 100%;
-    left: 0;
     background: #fff;
     width: 100%;
     flex-direction: column;
@@ -108,5 +116,178 @@
 
   .menu-toggle {
     display: flex;
+  }
+
+  .nav-link-btn {
+    color: #000000;
+  }
+  .navbar-portfolio .nav-link-btn {
+    color: black;
+  }
+}
+
+.nav-link-btn {
+  background: none;
+  border: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  padding: 0;
+  text-decoration: none;
+}
+
+.navbar.scrolled .nav-link-btn {
+  color: #fff; /* White text color when scrolled */
+}
+
+.nav-link-btn {
+  color: #fff; /* Default color */
+}
+
+.nav-link-btn.active {
+  font-weight: bold;
+  color: #ff6600; /* Your active color */
+}
+
+.navbar.scrolled .nav-link-btn.active {
+  font-weight: bold;
+  color: #ff6600; /* Your active color */
+}
+
+.navbar-portfolio .nav-link-btn {
+  color: black;
+}
+
+.navbar-portfolio .nav-link-btn.active {
+  color: #ff6600;
+}
+
+/* Add the base style for the element */
+.element {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+  font-size: 18px; /* Adjust the font size as needed */
+  font-weight: bold; /* Optional: Adjust the text style */
+}
+
+/* Create the border animation */
+.element::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #ff6600; /* Customize the color */
+  transition: width 0.5s ease-in-out; /* Adjust duration and easing */
+}
+
+/* Trigger the animation when the element is hovered */
+.element:hover::after {
+  width: 100%;
+}
+
+/* Base style for nav items */
+.nav-link-btn {
+  position: relative;
+  display: inline-block; /* Ensures the button wraps around the text only */
+  padding: 10px 20px;
+  font-size: 18px; /* You can adjust this as needed */
+  font-weight: bold;
+  cursor: pointer;
+  background: none;
+  border: none;
+  text-align: center;
+}
+
+/* Create the animated border effect */
+.nav-link-btn::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%; /* Start the border from the middle */
+  width: 0; /* Initially, width is 0 */
+  height: 2px;
+  background-color: #ff6600; /* Customize the color */
+  transition: width 0.3s ease-in-out;
+  transform: translateX(-50%); /* Center the border on the text */
+}
+
+/* On hover, the border expands based on the button text width */
+.nav-link-btn:hover::after {
+  width: 100%; /* Expands to full width of the text */
+}
+
+/* Active state: The border will be at full width of the nav item */
+.nav-link-btn.active::after {
+  width: 100%; /* Full width when active */
+}
+
+/* Remove default padding and margin from <li> */
+.nav-links li {
+  margin: 0;
+  padding: 0;
+  list-style: none; /* Optional: Remove bullet points if they appear */
+}
+
+/* Remove padding, margin, and set button to fit its content */
+.nav-link-btn {
+  margin: 0;
+  padding: 0; /* No padding between text and the border */
+  border: none;
+  background: none;
+  font-size: 18px; /* Set your desired font size */
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  position: relative; /* Ensure the pseudo-element works properly */
+}
+
+/* Responsive Adjustments for Tablet */
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 1.5rem 2rem; /* Reduce padding */
+  }
+  .nav-links {
+    gap: 1.5rem; /* Adjust gap for better fit */
+  }
+}
+
+/* Desktop View Adjustments */
+@media (min-width: 1024px) {
+  .navbar {
+    padding: 2rem 4rem; /* Increase navbar padding */
+  }
+  .nav-links {
+    gap: 2rem; /* More space between nav items */
+  }
+}
+@media (max-width: 400px) {
+  .nav-link-btn {
+    color: #000000; /* Default color */
+  }
+  .navbar.scrolled .nav-link-btn {
+    color: #000000; /* White text color when scrolled */
+  }
+  .nav-links {
+    width: 300px;
+    position: absolute;
+    top: 100%;
+    justify-content: center;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-height: 0;
+    overflow: hidden;
+    gap: 1.5rem;
+    padding: 1rem 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    z-index: 999;
+    max-height: 300px;
+
+    transition: max-height 0.3s ease;
   }
 }

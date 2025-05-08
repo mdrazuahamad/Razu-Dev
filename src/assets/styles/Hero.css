@@ -7,6 +7,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0 2rem; /* Added padding for smaller screens */
 }
 
 /* Background Video */
@@ -86,6 +87,7 @@
   display: block;
   margin-bottom: 1rem;
 }
+
 .experience {
   font-size: 1rem;
   font-weight: 400;
@@ -115,6 +117,7 @@
   transform: translateY(-2px);
   margin-bottom: 1rem;
 }
+
 /* Social Icons */
 .social-icons {
   margin-top: 1.5rem;
@@ -180,9 +183,11 @@
   transition: transform 0.3s ease;
   pointer-events: auto;
 }
+
 .orbit-icons.paused {
   animation-play-state: paused; /* Pauses animation when hovered */
 }
+
 /* Orbit Rotation Animation */
 @keyframes rotate {
   from {
@@ -195,23 +200,85 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  /* Hero Section Adjustment */
+  .hero {
+    height: auto;
+    padding: 3rem 1rem; /* Added extra padding for smaller devices */
+  }
+
   .hero-title {
     font-size: 2.25rem;
   }
+
   .typewriter {
     font-size: 1rem;
   }
+
   .orbit-wrapper {
-    width: 220px;
-    height: 220px;
+    width: 250px;
+    height: 250px;
   }
+
   .center-image {
-    width: 90px;
-    height: 90px;
-    top: 65px;
-    left: 65px;
+    width: 120px;
+    height: 120px;
+    top: 60px;
+    left: 60px;
   }
+
   .orbit-icon {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .hero-overlay {
+    flex-direction: column; /* Stack content vertically on smaller screens */
+    padding: 1.5rem;
+  }
+
+  .social-icons {
+    justify-content: center;
+    margin-top: 1.5rem;
+  }
+}
+
+/* For Mobile */
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 1.75rem;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    margin-left: 0;
+    text-align: center;
+    font-size: 0.875rem;
+    margin-top: 84px;
+  }
+
+  .typewriter {
+    font-size: 0.875rem;
+  }
+
+  .orbit-wrapper {
+    width: 200px;
+    height: 200px;
+    display: none;
+  }
+
+  .center-image {
+    width: 80px;
+    height: 80px;
+    top: 60px;
+    left: 60px;
+  }
+
+  .orbit-icon {
+    font-size: 1rem;
   }
 }

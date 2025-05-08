@@ -11,8 +11,24 @@ import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { useEffect } from "react";
 
 function Home() {
+  useEffect(() => {
+    const hash = window.location.hash;
+    if (hash) {
+      const element = document.querySelector(hash);
+      if (element) {
+        setTimeout(() => {
+          window.scrollTo({
+            top: element.offsetTop - 60,
+            behavior: "smooth",
+          });
+        }, 100);
+      }
+    }
+  }, []);
+
   return (
     <div className='App'>
       <Navbar />

@@ -11,7 +11,6 @@ const Navbar = () => {
 
   const isScrollTrackedPage = ["/", "/portfolio"].includes(location.pathname);
 
-  // Handle scroll and update active section
   const handleScroll = () => {
     const navbar = document.querySelector(".navbar");
 
@@ -21,7 +20,6 @@ const Navbar = () => {
       navbar?.classList.remove("scrolled");
     }
 
-    // Track active section only on specified pages
     if (isScrollTrackedPage) {
       const sections = document.querySelectorAll("section[id]");
       const scrollY = window.pageYOffset;
@@ -37,19 +35,14 @@ const Navbar = () => {
       });
     }
   };
+
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
-    handleScroll(); // Run initially on mount
-
-    if (location.pathname === "/portfolio") {
-      setActiveSection("portfolio");
-    }
-
+    handleScroll(); // run on mount
     return () => window.removeEventListener("scroll", handleScroll);
   }, [location]);
 
-  const smoothScroll = (e, target) => {
-    e.preventDefault();
+  const smoothScroll = (target) => {
     const element = document.querySelector(target);
     if (element) {
       window.scrollTo({
@@ -57,21 +50,36 @@ const Navbar = () => {
         behavior: "smooth",
       });
     }
-    setMenuOpen(false);
   };
 
   const handleNavClick = (e, id) => {
     e.preventDefault();
-
     if (id === "portfolio") {
-      navigate("/portfolio");
-      setMenuOpen(false); // Close menu after navigation
-    } else if (isScrollTrackedPage) {
-      smoothScroll(e, `#${id}`);
+      if (location.pathname !== "/portfolio") {
+        navigate("/portfolio");
+      } else {
+        smoothScroll(`#portfolio`);
+      }
     } else {
-      navigate(`/#${id}`);
-      setMenuOpen(false); // Close menu after navigating to homepage section
+      if (location.pathname !== "/") {
+        navigate("/"); // First navigate to home
+        // Delay smooth scroll until page loads
+        setTimeout(() => {
+          const targetEl = document.getElementById(id);
+          if (targetEl) {
+            window.scrollTo({
+              top: targetEl.offsetTop - 60,
+              behavior: "smooth",
+            });
+          }
+        }, 300); // Adjust delay if needed
+      } else {
+        // Already on home, scroll without changing URL
+        smoothScroll(`#${id}`);
+      }
     }
+
+    setMenuOpen(false);
   };
 
   const navItems = [
@@ -94,15 +102,16 @@ const Navbar = () => {
       <ul className={`nav-links ${menuOpen ? "active" : ""}`}>
         {navItems.map(({ id, label }) => (
           <li key={id}>
-            <a
-              href={`#${id}`}
+            <button
               onClick={(e) => handleNavClick(e, id)}
-              className={activeSection === id ? "active" : ""}>
+              className={`nav-link-btn ${activeSection === id ? "active" : ""}`} // Apply active class if section matches
+            >
               {label}
-            </a>
+            </button>
           </li>
         ))}
       </ul>
+
       <div className='menu-toggle' onClick={() => setMenuOpen(!menuOpen)}>
         <span></span>
         <span></span>

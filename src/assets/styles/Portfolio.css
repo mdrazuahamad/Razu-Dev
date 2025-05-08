@@ -42,7 +42,7 @@
 /* Portfolio Grid */
 .portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(6, 1fr); /* Always show 4 items */
+  grid-template-columns: repeat(6, 1fr); /* Default: 6 columns */
   gap: 2rem;
   justify-items: center;
 }
@@ -135,4 +135,121 @@
 
 .load-more-btn:hover {
   background-color: #0056b3;
+}
+
+/* Responsive Design for Tablets and Mobile */
+@media (max-width: 1624px) {
+  /* Portfolio Grid for Tablets */
+  .portfolio-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns on tablet */
+  }
+
+  .portfolio-card {
+    max-width: 100%; /* Allow cards to occupy full width */
+  }
+
+  /* Title & Subtitle */
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+  }
+
+  /* Filter Button */
+  .filter-btn {
+    padding: 8px 15px;
+  }
+}
+
+/* Tablet (Portrait) */
+@media (max-width: 1024px) {
+  /* Portfolio Grid for Tablets */
+  .portfolio-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns on tablet */
+  }
+
+  .portfolio-card {
+    max-width: 100%; /* Allow cards to occupy full width */
+  }
+
+  /* Title & Subtitle */
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+  }
+
+  /* Filter Button */
+  .filter-btn {
+    padding: 8px 15px;
+  }
+}
+
+/* Mobile (Portrait) */
+@media (max-width: 768px) {
+  /* Portfolio Grid for Mobile */
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile */
+  }
+
+  .portfolio-card {
+    max-width: 100%;
+  }
+
+  /* Title & Subtitle */
+  .section-title {
+    font-size: 1.75rem;
+  }
+
+  .section-subtitle {
+    font-size: 0.9rem;
+  }
+
+  /* Project Info */
+  .project-info h3 {
+    font-size: 1.25rem;
+  }
+
+  .project-info p {
+    font-size: 0.875rem;
+  }
+
+  /* Filter Button */
+  .filter-btn {
+    padding: 6px 12px;
+  }
+
+  .project-links a {
+    padding: 5px 15px; /* Smaller button for mobile */
+  }
+}
+
+/* Mobile (Landscape) */
+@media (max-width: 480px) {
+  /* Portfolio Grid for Mobile Landscape */
+  .portfolio-grid {
+    grid-template-columns: 1fr; /* Single column on very small devices */
+  }
+
+  /* Title & Subtitle */
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .section-subtitle {
+    font-size: 0.85rem;
+  }
+
+  /* Filter Button */
+  .filter-btn {
+    padding: 6px 12px;
+  }
+
+  .project-links a {
+    padding: 5px 10px; /* Further adjust buttons for mobile landscape */
+  }
 }

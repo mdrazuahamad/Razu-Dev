@@ -1,4 +1,3 @@
-// src/components/Testimonials.jsx
 import React from "react";
 import Slider from "react-slick";
 import { testimonials } from "../data/testimonials";
@@ -6,6 +5,7 @@ import "../assets/styles/Testimonials.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+// Adjust settings for responsiveness
 const settings = {
   dots: true,
   arrows: false,
@@ -14,6 +14,22 @@ const settings = {
   slidesToShow: 4,
   autoplay: true,
   autoplaySpeed: 5000,
+  responsive: [
+    {
+      // For tablets and smaller screens (min-width: 768px)
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 2, // Show 2 testimonials on tablets
+      },
+    },
+    {
+      // For mobile devices (max-width: 768px)
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 1, // Show 1 testimonial on mobile
+      },
+    },
+  ],
 };
 
 const Testimonials = () => {
