@@ -36,7 +36,7 @@ const About = () => {
           <a
             href='/assets/files/MD Razu Ahamad Final Version.pdf'
             download
-            className='btn cv-btn'>
+            className=' cv-btn'>
             📄 Download CV
           </a>
         </motion.div>

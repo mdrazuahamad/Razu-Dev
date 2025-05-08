@@ -4,7 +4,7 @@ import {
   FaGithub,
   FaLinkedin,
   FaEnvelope,
-  FaPhone,
+  FaWhatsapp,
   FaMapMarkerAlt,
 } from "react-icons/fa";
 
@@ -28,7 +28,7 @@ const Footer = () => {
           <hr />
           <ul>
             <li>
-              <a href='#projects'>Projects</a>
+              <a href='#portfolio'>Portfolio</a>
             </li>
             <li>
               <a href='#about'>About</a>
@@ -44,14 +44,37 @@ const Footer = () => {
           <h3>Contact Info</h3>
           <hr />
           <ul className='contact-info'>
-            <li>
-              <FaEnvelope /> mdrazuahamad8@gmail.com
+            <li className='flex items-center gap-2 text-gray-700'>
+              <a
+                href='mailto:mdrazuahamad8@gmail.com'
+                style={{ gap: "8px", display: "flex", alignItems: "center" }}>
+                <FaEnvelope className='text-gray-600' />
+                mdrazuahamad8@gmail.com
+              </a>
             </li>
             <li>
-              <FaPhone /> +880 1994540932
+              <a
+                style={{ gap: "8px", display: "flex", alignItems: "center" }}
+                href='https://wa.me/8801994540932'
+                target='_blank'
+                rel='noopener noreferrer'>
+                <FaWhatsapp
+                  style={{
+                    fontSize: "14px",
+                  }}
+                />
+                +880 1994 540932
+              </a>
             </li>
-            <li>
-              <FaMapMarkerAlt /> Jessore, Khulna, Bangladesh
+            <li className='flex items-center gap-2 text-gray-700'>
+              <a
+                href='https://www.google.com/maps/place/Jessore,+Khulna,+Bangladesh'
+                target='_blank'
+                rel='noopener noreferrer'
+                style={{ gap: "8px", display: "flex", alignItems: "center" }}>
+                <FaMapMarkerAlt className='text-red-500' />
+                Jessore, Khulna, Bangladesh
+              </a>
             </li>
           </ul>
         </div>
@@ -62,13 +85,13 @@ const Footer = () => {
           <hr />
           <div className='footer-socials'>
             <a
-              href='https://github.com/your-github'
+              href='https://github.com/mdrazuahamad'
               target='_blank'
               rel='noopener noreferrer'>
               <FaGithub />
             </a>
             <a
-              href='https://linkedin.com/in/your-linkedin'
+              href='https://www.linkedin.com/in/mdrazuahamad/'
               target='_blank'
               rel='noopener noreferrer'>
               <FaLinkedin />

@@ -1,4 +1,5 @@
 import React from "react";
+import { FaMapMarkerAlt, FaEnvelope } from "react-icons/fa";
 import "../assets/styles/Contact.css";
 
 const Contact = () => {
@@ -12,6 +13,15 @@ const Contact = () => {
 
           <label htmlFor='email'>Email</label>
           <input type='email' id='email' name='email' placeholder='Your Email' required />
+
+          <label htmlFor='service'>Service Needed</label>
+          <select id='service' name='service' required>
+            <option value=''>-- Select a Service --</option>
+            <option value='wordpress'>WordPress Development</option>
+            <option value='shopify'>Shopify Store Setup</option>
+            <option value='react-app'>React Web App</option>
+            <option value='custom'>Custom Web Solution</option>
+          </select>
 
           <label htmlFor='message'>Message</label>
           <textarea

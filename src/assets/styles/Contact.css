@@ -72,3 +72,18 @@
     flex-direction: column;
   }
 }
+.contact-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #333;
+  text-decoration: none;
+}
+
+.contact-link:hover {
+  color: #007bff;
+}
+
+.icon {
+  color: #ff4d4f;
+}
