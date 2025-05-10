@@ -18,7 +18,7 @@ import {
 } from "react-icons/fa";
 
 import heroImage from "../assets/images/hero-image.png";
-import heroVideo from "../assets/videos/vdo.mp4"; // Ensure correct path
+import heroVideo from "../assets/videos/video2.mp4"; // Ensure correct path
 import "../assets/styles/Hero.css";
 
 const Hero = () => {

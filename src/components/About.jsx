@@ -33,10 +33,7 @@ const About = () => {
             in CMS and full-stack development. I help businesses create elegant, scalable,
             and high-performing web solutions.
           </p>
-          <a
-            href='/assets/files/MD Razu Ahamad Final Version.pdf'
-            download
-            className=' cv-btn'>
+          <a href='/src/assets/files/MD Razu Ahamad.pdf' download className=' cv-btn'>
             📄 Download CV
           </a>
         </motion.div>
