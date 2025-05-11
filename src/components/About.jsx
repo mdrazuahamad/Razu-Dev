@@ -61,7 +61,7 @@ const About = () => {
             <div className='about-card'>
               <h3>🌐 Projects</h3>
               <p>
-                Built 50+ websites including custom CMS, eCommerce platforms, and web
+                Built 100+ websites including custom CMS, eCommerce platforms, and web
                 apps.
               </p>
             </div>
