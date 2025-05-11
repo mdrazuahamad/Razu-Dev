@@ -6,7 +6,7 @@ const projects = [
     tech: ["WordPress", "WooCommerce"],
     image: "/images/2025-05-07_202929.png",
     live: "https://matthewaugusta.com/",
-    github: "https://github.com/yourproject1",
+    github: "",
   },
   {
     id: 2,
@@ -15,7 +15,7 @@ const projects = [
     tech: ["React", "MongoDB"],
     image: "/images/2025-05-07_203042.png",
     live: "https://www.prosfata.com/",
-    github: "https://github.com/yourproject2",
+    github: "",
   },
   {
     id: 3,
@@ -24,7 +24,7 @@ const projects = [
     tech: ["Shopify", "Liquid"],
     image: "/images/2025-05-07_203120.png",
     live: "https://hblcoffee.com/",
-    github: "https://github.com/yourproject3",
+    github: "",
   },
   {
     id: 4,
@@ -33,7 +33,7 @@ const projects = [
     tech: ["Wordpress", "Elementor"],
     image: "/images/2025-05-07_202541.png",
     live: "https://maanrishfa.com/",
-    github: "https://github.com/yourproject3",
+    github: "",
   },
   {
     id: 5,
@@ -42,7 +42,7 @@ const projects = [
     tech: ["Wix"],
     image: "/images/2025-05-07_203218.png",
     live: "https://www.princesspaulaconsulting.com/",
-    github: "https://github.com/yourproject3",
+    github: "",
   },
   {
     id: 6,
@@ -50,8 +50,8 @@ const projects = [
     category: "CMS",
     tech: ["Wordpress", "Divi Builder"],
     image: "/images/2025-05-07_203528.png",
-    live: "https://maanrishfa.com/",
-    github: "https://github.com/yourproject3",
+    live: "https://roundtheclocklogistics.com/",
+    github: "",
   },
   {
     id: 7,
@@ -59,8 +59,8 @@ const projects = [
     category: "CMS",
     tech: ["Wordpress", "Divi Builder"],
     image: "/images/2025-05-07_204051.png",
-    live: "https://maanrishfa.com/",
-    github: "https://github.com/yourproject3",
+    live: "https://reliableremediation.com/",
+    github: "",
   },
   {
     id: 8,
@@ -68,8 +68,8 @@ const projects = [
     category: "CMS",
     tech: ["Wordpress", "Elementor"],
     image: "/images/2025-05-07_204647.png",
-    live: "https://maanrishfa.com/",
-    github: "https://github.com/yourproject3",
+    live: "https://restorationohio.com/",
+    github: "",
   },
   {
     id: 9,
@@ -77,8 +77,8 @@ const projects = [
     category: "CMS",
     tech: ["Wordpress", "Elementor"],
     image: "/images/2025-05-07_205006.png",
-    live: "https://maanrishfa.com/",
-    github: "https://github.com/yourproject3",
+    live: "https://studyin.com.au/",
+    github: "",
   },
   {
     id: 10,
@@ -86,8 +86,8 @@ const projects = [
     category: "CMS",
     tech: ["Squarspace"],
     image: "/images/2025-05-07_211311.png",
-    live: "https://maanrishfa.com/",
-    github: "https://github.com/yourproject3",
+    live: "https://filmlaunch.squarespace.com/",
+    github: "",
   },
   {
     id: 11,
@@ -95,8 +95,8 @@ const projects = [
     category: "React",
     tech: ["ReactJs", "Python Django"],
     image: "/images/2025-05-07_211722.png",
-    live: "https://maanrishfa.com/",
-    github: "https://github.com/yourproject3",
+    live: "https://nateye.com",
+    github: "",
   },
   {
     id: 12,
@@ -104,8 +104,8 @@ const projects = [
     category: "React",
     tech: ["ReactJs", "Tailwind CSS"],
     image: "/images/2025-05-07_212204.png",
-    live: "https://maanrishfa.com/",
-    github: "https://github.com/yourproject3",
+    live: "https://mobionizer.com/",
+    github: "",
   },
 ];
 
