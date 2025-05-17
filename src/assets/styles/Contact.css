@@ -24,6 +24,9 @@
   color: #333;
   letter-spacing: 0.3px;
 }
+.form-group textarea {
+  resize: none;
+}
 /* Contact Form styling */
 .contact-form input,
 .contact-form select,
