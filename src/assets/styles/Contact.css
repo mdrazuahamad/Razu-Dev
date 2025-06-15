@@ -260,3 +260,159 @@
   margin-top: 10px;
   font-weight: 500;
 }
+.contact-section {
+  padding: 60px 20px;
+  background-color: #f8f9fa;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.contact-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.contact-form,
+.contact-info-container {
+  flex: 1 1 48%;
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+.spinner {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #fff;
+  border-top: 2px solid transparent;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+  vertical-align: middle;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.success-message {
+  margin-top: 15px;
+  color: green;
+  font-weight: 600;
+  text-align: center;
+}
+
+.contact-info-list,
+.special-notes-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.contact-info-item,
+.special-note-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+}
+
+.contact-icon,
+.special-note-icon {
+  margin-right: 10px;
+  color: #007bff;
+}
+
+.contact-map {
+  margin-top: 40px;
+}
+
+/* 🔄 Mobile & Tablet Responsive */
+@media screen and (max-width: 991px) {
+  .contact-wrapper {
+    flex-direction: column;
+  }
+
+  .contact-form,
+  .contact-info-container {
+    flex: 1 1 100%;
+  }
+
+  .contact-map iframe {
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .section-title {
+    font-size: 1.6rem;
+  }
+
+  .contact-form,
+  .contact-info-container {
+    padding: 20px;
+  }
+
+  .submit-button {
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    font-size: 0.95rem;
+  }
+}
