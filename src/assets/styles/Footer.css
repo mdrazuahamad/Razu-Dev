@@ -100,16 +100,6 @@ hr {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
   }
-
-  .footer-column.follow {
-    grid-column: 4;
-    text-align: right;
-  }
-
-  .footer-column.follow .footer-socials a {
-    margin-left: 12px;
-    margin-right: 0;
-  }
 }
 
 /* Responsive adjustments for Follow Me */
@@ -126,11 +116,22 @@ hr {
 
 /* Additional styling for better spacing of the Follow Me section */
 /* Fixing the horizontal rule (hr) position */
-.footer-column.follow hr {
-  max-width: 70px; /* Adjust hr length for better alignment with Follow Me */
-  margin: 20px 18px; /* Add margin to give it spacing */
-  border-top: 1px solid #475569; /* Make sure the hr has the same style */
-  margin-left: auto; /* Push the hr to the center of Follow Me section */
+.footer-payments {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: start;
 }
 
-/* Ensure that Follow Me stays on the right and aligns properly */
+.payment-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding-right: 10px;
+  border-radius: 50px;
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}

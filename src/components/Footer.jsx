@@ -7,6 +7,7 @@ import {
   FaWhatsapp,
   FaMapMarkerAlt,
 } from "react-icons/fa";
+import { SiPayoneer, SiWise } from "react-icons/si"; // official brand icons
 
 const Footer = () => {
   return (
@@ -80,8 +81,9 @@ const Footer = () => {
         </div>
 
         {/* Follow Me */}
+
         <div className='footer-column follow'>
-          <h3>Follow Me</h3>
+          <h3>Follow & Support Me</h3>
           <hr />
           <div className='footer-socials'>
             <a
@@ -99,6 +101,25 @@ const Footer = () => {
             <a href='mailto:mdrazuahamad8@gmail.com'>
               <FaEnvelope />
             </a>
+          </div>
+          <div>
+            <h3>Payment Methods</h3>
+            <div className='footer-payments'>
+              <a
+                href='https://www.payoneer.com'
+                target='_blank'
+                rel='noopener noreferrer'
+                className='payment-btn payoneer'>
+                <SiPayoneer style={{ marginRight: "8px" }} /> Payoneer
+              </a>
+              <a
+                href='https://wise.com/send-money'
+                target='_blank'
+                rel='noopener noreferrer'
+                className='payment-btn wise'>
+                <SiWise style={{ marginRight: "8px" }} /> Wise
+              </a>
+            </div>
           </div>
         </div>
       </div>
