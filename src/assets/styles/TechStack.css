@@ -1,0 +1,88 @@
+.techstack-slider {
+  padding: 80px 20px;
+  text-align: center;
+  background: #f4f7fa;
+}
+
+.slider-header h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+  color: #0f1a2b;
+}
+
+.slider-header p {
+  color: #6b7c93;
+  font-size: 1.1rem;
+  margin-bottom: 50px;
+}
+
+/* Swiper Wrapper */
+.swiper-wrapper {
+  padding: 50px 0;
+}
+
+/* Card Styling */
+.tech-card {
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 30px 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.tech-card:hover {
+  transform: translateY(-12px) scale(1.07);
+}
+
+/* Icon Gradient + Glow */
+.tech-icon {
+  font-size: 4rem;
+  margin-bottom: 15px;
+  background: linear-gradient(135deg, #0073ff, #00d4ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: transform 0.5s ease, filter 0.4s ease;
+}
+
+.tech-card:hover .tech-icon {
+  transform: rotate(15deg) scale(1.2);
+}
+
+/* Card Text */
+.tech-card h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+  color: #0f1a2b;
+}
+
+.tech-card p {
+  font-size: 1rem;
+  color: #6b7c93;
+}
+
+/* Swiper Buttons & Pagination */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #0073ff;
+  transition: all 0.3s ease;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  color: #0056b3;
+}
+
+.swiper-pagination-bullet {
+  background: #0073ff;
+  opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+  background: #0056b3;
+  opacity: 1;
+}

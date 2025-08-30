@@ -12,7 +12,7 @@ const categories = ["All", "CMS", "React"];
 
 const Portfolio = ({ showAll = false }) => {
   const [filter, setFilter] = useState("All");
-  const [visibleCount, setVisibleCount] = useState(9);
+  const [visibleCount, setVisibleCount] = useState(4);
 
   const filteredProjects =
     filter === "All"
@@ -21,29 +21,32 @@ const Portfolio = ({ showAll = false }) => {
 
   const visibleProjects = showAll
     ? filteredProjects
-    : filteredProjects.slice(0, visibleCount);
+    : filteredProjects.slice(0, visibleCount); // ✅ fix here
 
   const navigate = useNavigate();
+
   const loadMore = () => {
-    setVisibleCount((prev) => prev + 8);
+    setVisibleCount((prev) => prev + 4); // show 4 more projects
     setTimeout(() => {
-      navigate("/portfolio");
+      navigate("/portfolio"); // optional navigation
     }, 100);
+  };
+
+  const handleFilterChange = (cat) => {
+    setFilter(cat);
+    setVisibleCount(4); // reset visible count on filter change
   };
 
   return (
     <section className='portfolio' id='portfolio'>
-      <h2 className='section-title'>Portfolio</h2>
+      <h2 className='section-title'>My Recent Projects</h2>
 
       <div className='portfolio-filters'>
         {categories.map((cat) => (
           <button
             key={cat}
             className={`filter-btn ${filter === cat ? "active" : ""}`}
-            onClick={() => {
-              setFilter(cat);
-              setVisibleCount(12);
-            }}>
+            onClick={() => handleFilterChange(cat)}>
             {cat}
           </button>
         ))}
