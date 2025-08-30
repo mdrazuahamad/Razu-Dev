@@ -12,7 +12,7 @@ const categories = ["All", "CMS", "React"];
 
 const Portfolio = ({ showAll = false }) => {
   const [filter, setFilter] = useState("All");
-  const [visibleCount, setVisibleCount] = useState(12);
+  const [visibleCount, setVisibleCount] = useState(9);
 
   const filteredProjects =
     filter === "All"
@@ -25,7 +25,7 @@ const Portfolio = ({ showAll = false }) => {
 
   const navigate = useNavigate();
   const loadMore = () => {
-    setVisibleCount((prev) => prev + 16);
+    setVisibleCount((prev) => prev + 8);
     setTimeout(() => {
       navigate("/portfolio");
     }, 100);
@@ -42,7 +42,7 @@ const Portfolio = ({ showAll = false }) => {
             className={`filter-btn ${filter === cat ? "active" : ""}`}
             onClick={() => {
               setFilter(cat);
-              setVisibleCount(16);
+              setVisibleCount(12);
             }}>
             {cat}
           </button>

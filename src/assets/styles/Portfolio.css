@@ -42,7 +42,9 @@
 /* Portfolio Grid */
 .portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(6, 1fr); /* Default: 6 columns */
+  max-width: 1100px;
+  margin: 0 auto;
+  grid-template-columns: repeat(4, 1fr); /* Default: 4 columns */
   gap: 2rem;
   justify-items: center;
 }
