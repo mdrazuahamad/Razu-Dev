@@ -68,7 +68,7 @@ const About = () => {
             <div className='about-card'>
               <h3>📫 Contact</h3>
               <p>
-                Email: razuahmad.dev@gmail.com
+                Email: mdrazuahamad8@gmail.com
                 <br />
                 Location: Jessore, Khulna, Bangladesh
               </p>
