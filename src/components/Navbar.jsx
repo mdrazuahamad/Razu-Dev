@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import "../assets/styles/Navbar.css";
-import logo from "../assets/images/logo.png";
+import logo from "../assets/images/razu.png";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);

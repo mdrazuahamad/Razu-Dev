@@ -8,6 +8,7 @@ import {
   FaMapMarkerAlt,
 } from "react-icons/fa";
 import { SiPayoneer, SiWise } from "react-icons/si"; // official brand icons
+import logo from "../assets/images/razu.png";
 
 const Footer = () => {
   return (
@@ -15,7 +16,11 @@ const Footer = () => {
       <div className='footer-container'>
         {/* Quick Links */}
         <div className='footer-column'>
-          <h3>MD Razu Ahamad</h3>
+          <img
+            src={logo}
+            alt='MD Razu Ahamad'
+            style={{ width: "200px", height: "auto" }}
+          />
           <p className='footer-role'>Web Developer & CMS Specialist</p>
           <p className='footer-description'>
             I am a passionate web developer with expertise in creating responsive and
