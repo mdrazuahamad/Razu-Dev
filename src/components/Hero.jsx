@@ -17,7 +17,7 @@ import {
   FaLinkedin,
 } from "react-icons/fa";
 
-import heroImage from "../assets/images/hero-image.png";
+import heroImage from "../assets/images/66.png";
 import heroVideo from "../assets/videos/video2.mp4"; // Ensure correct path
 import "../assets/styles/Hero.css";
 

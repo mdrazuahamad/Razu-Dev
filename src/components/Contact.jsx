@@ -65,7 +65,7 @@ const Contact = () => {
               <ValidationError prefix='Message' field='message' errors={state.errors} />
             </div>
 
-            <button type='submit' className='submit-button' disabled={state.submitting}>
+            <button type='submit' className='btn' disabled={state.submitting}>
               {state.submitting ? (
                 <span className='spinner'></span> // Spinner style below
               ) : (

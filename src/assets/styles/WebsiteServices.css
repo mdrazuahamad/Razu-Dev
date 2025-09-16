@@ -75,14 +75,14 @@
 }
 
 .websiteservice-card a {
-  color: #dc2626; /* red-600 */
+  color: #ffffff; /* red-600 */
   font-weight: 600;
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
 .websiteservice-card a:hover {
-  color: #b91c1c;
+  color: #fffb00;
 }
 .contact-btn {
   display: inline-flex;

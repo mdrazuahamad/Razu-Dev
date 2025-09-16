@@ -98,7 +98,7 @@ const WebsiteServices = () => {
               href={service.whatsapp}
               target='_blank'
               rel='noopener noreferrer'
-              className='contact-btn'>
+              className='btn'>
               Contact Now
             </a>
           </div>

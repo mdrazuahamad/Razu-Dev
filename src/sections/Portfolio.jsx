@@ -69,7 +69,7 @@ const Portfolio = ({ showAll = false }) => {
 
       {!showAll && visibleCount < filteredProjects.length && (
         <div className='load-more-container'>
-          <button className='load-more-btn' onClick={loadMore}>
+          <button className='btn' onClick={loadMore}>
             Load More
           </button>
         </div>

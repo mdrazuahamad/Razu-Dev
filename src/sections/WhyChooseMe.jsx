@@ -47,7 +47,7 @@ const WhyChooseMeAlt = () => {
 
           {/* Left-aligned CTA Button */}
           <div className='cta-wrapper'>
-            <a href='#contact' className='cta-button'>
+            <a href='#contact' className='btn'>
               Boost Your Business
             </a>
           </div>

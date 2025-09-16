@@ -39,24 +39,78 @@
   max-width: 100%;
 }
 
-.cv-btn {
-  display: inline-block;
-  background: linear-gradient(135deg, #007bff, #0056b3);
-  color: #fff;
-  padding: 12px 24px;
-  font-weight: 600;
-  border-radius: 8px;
+.btn {
+  border: none;
+  outline: none;
+  color: #000;
+  background: #ffffff; /* normal background */
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  padding: 15px 25px;
   text-decoration: none;
-  transition: all 0.3s ease;
-  box-shadow: 0 8px 20px rgba(0, 123, 255, 0.2);
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-.cv-btn:hover {
-  background: linear-gradient(135deg, #0056b3, #003f80);
-  transform: translateY(-2px);
-  color: #fff;
+.btn:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 1; /* সবসময় glow থাকবে */
+  border-radius: 10px;
 }
 
+.btn:hover {
+  background: #222; /* hover করলে আলাদা রঙ */
+  color: #fffb00; /* চাইলে টেক্সটের রঙও আলাদা দিন */
+}
+
+.btn:active {
+  color: #000;
+  background: #fffb00; /* active অবস্থায় আরও আলাদা রঙ */
+}
+
+.btn:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  background: #111;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
 .about-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));

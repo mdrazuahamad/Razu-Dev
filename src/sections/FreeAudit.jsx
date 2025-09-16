@@ -101,14 +101,15 @@ const FreeAudit = () => {
         <strong>Bonus Tip:</strong> Slow websites cost more than no websites—they silently
         lose potential customers.
       </p>
+      <br />
 
       <div className='audit-cta-wrapper'>
         <a
           href='https://api.whatsapp.com/send/?phone=8801994540932&text=Hi!+I+am+interested+in+your+Free+Website+Audit&type=phone_number&app_absent=0'
-          className='audit-cta'
+          className='btn'
           target='_blank'
           rel='noopener noreferrer'>
-          👉 Get Your Free Detailed Website Audit Report
+          Get Your Free Detailed Website Audit Report
         </a>
       </div>
     </section>
