@@ -15,6 +15,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useEffect } from "react";
 import WhyChooseMe from "../sections/WhyChooseMe";
+import FreeAudit from "../sections/FreeAudit";
 
 function Home() {
   useEffect(() => {
@@ -36,6 +37,7 @@ function Home() {
     <div className='App'>
       <Navbar />
       <Hero />
+      <FreeAudit />
       <About />
       <TechStack />
       <Portfolio />

@@ -9,28 +9,33 @@ body {
 /* =======================
    Base Navbar Styles
 ======================= */
-.navbar {
+.nav-container {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   padding: 2rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+
   z-index: 999;
   background-color: transparent;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.navbar.scrolled {
+.nav-container.scrolled {
   background-color: #222;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
   padding: 1rem 2rem;
 }
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1635px;
+  margin: 0 auto;
+}
 
 .logo img {
-  width: 400px;
+  width: 250px;
   height: auto;
   cursor: pointer;
 }

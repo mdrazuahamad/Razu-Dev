@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import "../assets/styles/Navbar.css";
 import logo from "../assets/images/razu.png";
+import { div } from "framer-motion/client";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -12,7 +13,7 @@ const Navbar = () => {
   const isScrollTrackedPage = ["/", "/portfolio"].includes(location.pathname);
 
   const handleScroll = () => {
-    const navbar = document.querySelector(".navbar");
+    const navbar = document.querySelector(".nav-container");
 
     if (window.scrollY > 50) {
       navbar?.classList.add("scrolled");
@@ -92,32 +93,34 @@ const Navbar = () => {
   ];
 
   return (
-    <nav
-      className={`navbar ${
-        location.pathname === "/" ? "navbar-home" : "navbar-portfolio"
-      }`}>
-      <div className='logo' onClick={() => navigate("/")}>
-        <img src={logo} alt='RazuDev Logo' />
-      </div>
-      <ul className={`nav-links ${menuOpen ? "active" : ""}`}>
-        {navItems.map(({ id, label }) => (
-          <li key={id}>
-            <button
-              onClick={(e) => handleNavClick(e, id)}
-              className={`nav-link-btn ${activeSection === id ? "active" : ""}`} // Apply active class if section matches
-            >
-              {label}
-            </button>
-          </li>
-        ))}
-      </ul>
+    <div className='nav-container'>
+      <nav
+        className={`navbar ${
+          location.pathname === "/" ? "navbar-home" : "navbar-portfolio"
+        }`}>
+        <div className='logo' onClick={() => navigate("/")}>
+          <img src={logo} alt='RazuDev Logo' />
+        </div>
+        <ul className={`nav-links ${menuOpen ? "active" : ""}`}>
+          {navItems.map(({ id, label }) => (
+            <li key={id}>
+              <button
+                onClick={(e) => handleNavClick(e, id)}
+                className={`nav-link-btn ${activeSection === id ? "active" : ""}`} // Apply active class if section matches
+              >
+                {label}
+              </button>
+            </li>
+          ))}
+        </ul>
 
-      <div className='menu-toggle' onClick={() => setMenuOpen(!menuOpen)}>
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </nav>
+        <div className='menu-toggle' onClick={() => setMenuOpen(!menuOpen)}>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </div>
   );
 };
 

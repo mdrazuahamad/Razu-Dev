@@ -76,15 +76,26 @@ const Hero = () => {
           </motion.a>
 
           <div className='social-icons'>
-            <a href='https://github.com/mdrazuahamad' target='_blank' rel='noreferrer'>
-              <FaGithub />
-            </a>
-            <a
-              href='https://www.linkedin.com/in/mdrazuahamad/'
-              target='_blank'
-              rel='noreferrer'>
-              <FaLinkedin />
-            </a>
+            <div className='Btn'>
+              <a
+                className='svgContainer'
+                href='https://github.com/mdrazuahamad'
+                target='_blank'
+                rel='noreferrer'>
+                <FaGithub />
+              </a>
+              <span class='BG'></span>
+            </div>
+            <div className='Btn'>
+              <a
+                className='svgContainer'
+                href='https://www.linkedin.com/in/mdrazuahamad/'
+                target='_blank'
+                rel='noreferrer'>
+                <FaLinkedin />
+              </a>
+              <span class='BG'></span>
+            </div>
           </div>
         </motion.div>
 
