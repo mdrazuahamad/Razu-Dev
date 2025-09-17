@@ -90,22 +90,38 @@ const Footer = () => {
         <div className='footer-column follow'>
           <h3>Follow & Support Me</h3>
           <hr />
-          <div className='footer-socials'>
-            <a
-              href='https://github.com/mdrazuahamad'
-              target='_blank'
-              rel='noopener noreferrer'>
-              <FaGithub />
-            </a>
-            <a
-              href='https://www.linkedin.com/in/mdrazuahamad/'
-              target='_blank'
-              rel='noopener noreferrer'>
-              <FaLinkedin />
-            </a>
-            <a href='mailto:mdrazuahamad8@gmail.com'>
-              <FaEnvelope />
-            </a>
+          <div style={{ marginTop: "0px" }} className='social-icons'>
+            <div className='Btn'>
+              <a
+                style={{ zIndex: 1 }}
+                className='svgContainer'
+                href='https://github.com/mdrazuahamad'
+                target='_blank'
+                rel='noreferrer'>
+                <FaGithub />
+              </a>
+              <span style={{ zIndex: 0 }} class='BG'></span>
+            </div>
+            <div className='Btn'>
+              <a
+                style={{ zIndex: 1 }}
+                className='svgContainer'
+                href='https://www.linkedin.com/in/mdrazuahamad/'
+                target='_blank'
+                rel='noreferrer'>
+                <FaLinkedin />
+              </a>
+              <span style={{ zIndex: 0 }} class='BG'></span>
+            </div>
+            <div className='Btn'>
+              <a
+                style={{ zIndex: 1 }}
+                className='svgContainer'
+                href='mailto:mdrazuahamad8@gmail.com'>
+                <FaEnvelope />
+              </a>
+              <span style={{ zIndex: 0 }} class='BG'></span>
+            </div>
           </div>
           <div>
             <h3>Payment Methods</h3>

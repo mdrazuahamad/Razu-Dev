@@ -10,23 +10,25 @@ const settings = {
   dots: true,
   arrows: false,
   infinite: true,
-  speed: 600,
+  speed: 5000,
   slidesToShow: 4,
+  slidesToScroll: 1, // ✅ always keep 1
   autoplay: true,
-  autoplaySpeed: 5000,
+  autoplaySpeed: 0,
+  cssEase: "linear", // ✅ smooth sliding effect
   responsive: [
     {
-      // For tablets and smaller screens (min-width: 768px)
       breakpoint: 1024,
       settings: {
-        slidesToShow: 2, // Show 2 testimonials on tablets
+        slidesToShow: 2,
+        slidesToScroll: 1, // same here
       },
     },
     {
-      // For mobile devices (max-width: 768px)
       breakpoint: 768,
       settings: {
-        slidesToShow: 1, // Show 1 testimonial on mobile
+        slidesToShow: 1,
+        slidesToScroll: 1, // same here
       },
     },
   ],

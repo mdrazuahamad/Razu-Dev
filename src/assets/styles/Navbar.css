@@ -14,7 +14,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 0.5rem 2rem;
+  padding: 1.5rem 2rem;
 
   z-index: 999;
   background-color: transparent;
@@ -22,7 +22,7 @@ body {
 }
 
 .nav-container.scrolled {
-  background-color: #222;
+  background-color: #0f172a;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
   padding: 1rem 2rem;
 }
@@ -53,7 +53,52 @@ body {
   margin: 0;
   padding: 0;
 }
+.link--elara {
+  font-family: aktiv-grotesk-extended, sans-serif;
+  font-size: 1.375rem;
+}
 
+.nav-link-btn::before {
+  transform-origin: 50% 100%;
+  transition: clip-path 0.3s, transform 0.3s cubic-bezier(0.2, 1, 0.8, 1);
+  clip-path: polygon(
+    0% 0%,
+    0% 100%,
+    0 100%,
+    0 0,
+    100% 0,
+    100% 100%,
+    0 100%,
+    0 100%,
+    100% 100%,
+    100% 0%
+  );
+}
+
+.nav-link-btn:hover::before {
+  transform: translate3d(0, 2px, 0) scale3d(1.08, 3, 1);
+  clip-path: polygon(
+    0% 0%,
+    0% 100%,
+    50% 100%,
+    50% 0,
+    50% 0,
+    50% 100%,
+    50% 100%,
+    0 100%,
+    100% 100%,
+    100% 0%
+  );
+}
+
+.nav-link-btn {
+  display: inline-block;
+  transition: transform 0.3s cubic-bezier(0.2, 1, 0.8, 1);
+}
+
+.nav-link-btn:hover {
+  transform: translate3d(0, -2px, 0);
+}
 /* Navigation buttons */
 .nav-link-btn {
   position: relative;
