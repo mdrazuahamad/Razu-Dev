@@ -33,8 +33,9 @@ const WhyChooseMeAlt = () => {
       <p className='section-subtitle'>
         I deliver professional web solutions that help your business grow.
       </p>
+
       <div className='divider'>
-        {/* Media Section (Image / Video) */}
+        {/* Media Section (Image/Video + CTA) */}
         <div className='media-container'>
           <h3 className='media-title'>Grow Your Business Faster</h3>
           <p className='media-description'>
@@ -42,12 +43,9 @@ const WhyChooseMeAlt = () => {
             your revenue.
           </p>
           <img src={whyimage} alt='Why Choose Me' className='media-image' />
-          <br />
-          <br />
 
-          {/* Left-aligned CTA Button */}
           <div className='cta-wrapper'>
-            <a href='#contact' className='btn'>
+            <a href='#contact' className='cta-button'>
               Boost Your Business
             </a>
           </div>

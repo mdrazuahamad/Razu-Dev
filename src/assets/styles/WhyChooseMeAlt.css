@@ -1,6 +1,6 @@
 .why-choose-me-alt {
   background: #f9fafb;
-  padding: 50px 20px; /* halka kom padding */
+  padding: 50px 20px;
   position: relative;
 }
 
@@ -149,31 +149,100 @@
   line-height: 1.4;
 }
 
-/* Responsive for small screens */
-@media (max-width: 768px) {
+/* ✅ Responsive for tablets */
+@media (max-width: 1024px) {
   .divider {
-    flex-direction: column;
+    gap: 40px;
   }
 
-  .timeline-item,
-  .timeline-item.left,
-  .timeline-item.right {
+  .timeline-container::before {
+    left: 30px;
+    transform: none;
+  }
+
+  .timeline-item {
     width: 100%;
+    padding: 10px 20px;
     text-align: left !important;
-    padding-left: 20px;
-    padding-right: 20px;
   }
 
   .timeline-item.left .timeline-content,
   .timeline-item.right .timeline-content {
-    margin: 0;
+    margin: 0 0 20px 50px;
   }
 
+  .timeline-item.left .timeline-icon,
+  .timeline-item.right .timeline-icon {
+    float: none;
+    transform: none;
+    margin-left: 0;
+    margin-right: 0;
+    position: absolute;
+    left: 0;
+  }
+}
+
+/* ✅ Responsive for mobile */
+@media (max-width: 600px) {
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .section-subtitle {
+    font-size: 0.85rem;
+  }
+
+  .media-container iframe {
+    height: 220px;
+  }
+
+  .divider {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .timeline-container {
+    margin-top: 40px;
+    padding-left: 0;
+  }
+
+  /* 🚀 Force all items full width */
+  .timeline-item {
+    width: 100% !important;
+    padding-left: 45px;
+    padding-right: 10px;
+    text-align: left !important;
+  }
+
+  /* 🚀 Remove alternating layout for mobile */
+  .timeline-item.left,
+  .timeline-item.right {
+    left: 0 !important;
+  }
+
+  /* 🚀 Timeline line position */
   .timeline-container::before {
     left: 20px;
     transform: none;
   }
+
+  /* 🚀 Icon fixed on left side */
+  .timeline-icon {
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 0;
+    float: none;
+    transform: none;
+  }
+
+  /* 🚀 Content takes full width */
+  .timeline-content {
+    margin: 0 0 20px 50px !important;
+  }
 }
+
+/* Media Content Titles */
 .media-title {
   font-size: 1.5rem;
   font-weight: 600;
@@ -189,8 +258,9 @@
   text-align: left;
   line-height: 1.4;
 }
+
 .cta-wrapper {
-  text-align: left; /* left-align the button */
+  text-align: left;
   margin-top: 20px;
 }
 

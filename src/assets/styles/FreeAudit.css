@@ -92,10 +92,11 @@
 }
 
 .btn {
+  display: inline-block;
   border: none;
   outline: none;
   color: #ffffff;
-  background: #141414; /* normal background */
+  background: #141414;
   cursor: pointer;
   position: relative;
   z-index: 0;
@@ -103,6 +104,13 @@
   padding: 15px 25px;
   text-decoration: none;
   transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+
+  /* ✅ Responsive behaviour */
+  font-size: 1rem;
+  max-width: 100%;
+  width: auto;
+  text-align: center;
+  white-space: nowrap;
 }
 
 .btn:before {
@@ -161,5 +169,21 @@
   }
   100% {
     background-position: 0 0;
+  }
+}
+/* ছোট স্ক্রিনে text shrink + padding কমানো */
+@media (max-width: 768px) {
+  .btn {
+    font-size: 0.9rem;
+    padding: 12px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn {
+    display: block; /* পুরো লাইন নেবে */
+    width: 100%; /* container full width */
+    font-size: 0.95rem;
+    padding: 14px;
   }
 }
