@@ -1,8 +1,8 @@
 /* src/components/WebsiteServices.css */
 
 .websiteservice-section {
-  background: #f4f7fa;
-  color: #111;
+  background: #0f172a;
+  color: #ffffff;
   padding: 60px 20px;
   text-align: center;
 }
@@ -19,7 +19,7 @@
 
 .websiteservice-header p {
   font-size: 18px;
-  color: #555;
+  color: #ffffff;
   margin-bottom: 40px;
   letter-spacing: 1px;
 }
@@ -33,7 +33,7 @@
 }
 
 .websiteservice-card {
-  background: #fff;
+  background: #000000;
   padding: 25px;
   border-radius: 12px;
   display: flex; /* make card a flex container */
@@ -47,7 +47,7 @@
 .websiteservice-card p {
   font-size: 14px;
   line-height: 1.6;
-  color: #444;
+  color: #ffffff;
   margin-bottom: 20px;
   flex-grow: 1; /* allow description to take remaining space */
 }
@@ -65,7 +65,7 @@
 .websiteservice-icon {
   font-size: 40px;
   margin-bottom: 15px;
-  color: #2563eb;
+  color: #ffffff;
 }
 
 .websiteservice-card h3 {
