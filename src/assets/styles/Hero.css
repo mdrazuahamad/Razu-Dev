@@ -363,7 +363,9 @@
   .typewriter {
     font-size: 0.875rem;
   }
-
+  .hero-image {
+    display: none;
+  }
   .orbit-wrapper {
     width: 200px;
     height: 200px;
