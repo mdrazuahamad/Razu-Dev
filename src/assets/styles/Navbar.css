@@ -21,9 +21,9 @@ body {
 }
 
 .nav-container.scrolled {
-  background-color: #0f172a;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
-  padding: 1rem 2rem;
+  background: #0f172ae5; /* transparent overlay so blur visible */
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
 }
 .navbar {
   display: flex;
