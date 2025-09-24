@@ -19,6 +19,15 @@ const projects = [
   },
   {
     id: 3,
+    title: "EV charging Station Website",
+    category: "Wordpress",
+    tech: ["Wordpress", "Elementor"],
+    image: "/images/mdrazu ahamad.png",
+    live: "https://power-portal.co.uk/",
+    github: "",
+  },
+  {
+    id: 4,
     title: "E-commerce Website",
     category: "CMS",
     tech: ["Shopify", "Liquid"],
@@ -27,7 +36,7 @@ const projects = [
     github: "",
   },
   {
-    id: 4,
+    id: 5,
     title: "Agency Website",
     category: "CMS",
     tech: ["Wordpress", "Elementor"],
@@ -36,7 +45,7 @@ const projects = [
     github: "",
   },
   {
-    id: 5,
+    id: 6,
     title: "Consulting Website",
     category: "CMS",
     tech: ["Wix"],
@@ -45,7 +54,7 @@ const projects = [
     github: "",
   },
   {
-    id: 6,
+    id: 7,
     title: "Transportation Services Website",
     category: "CMS",
     tech: ["Wordpress", "Divi Builder"],
@@ -54,7 +63,7 @@ const projects = [
     github: "",
   },
   {
-    id: 7,
+    id: 8,
     title: "Mold Damage Restoration",
     category: "CMS",
     tech: ["Wordpress", "Divi Builder"],
@@ -63,7 +72,7 @@ const projects = [
     github: "",
   },
   {
-    id: 8,
+    id: 9,
     title: "Home Business Website",
     category: "CMS",
     tech: ["Wordpress", "Elementor"],
@@ -72,7 +81,7 @@ const projects = [
     github: "",
   },
   {
-    id: 9,
+    id: 10,
     title: "Career Development Website",
     category: "CMS",
     tech: ["Wordpress", "Elementor"],
@@ -81,7 +90,7 @@ const projects = [
     github: "",
   },
   {
-    id: 10,
+    id: 11,
     title: "Film Maker Website",
     category: "CMS",
     tech: ["Squarspace"],
@@ -90,7 +99,7 @@ const projects = [
     github: "",
   },
   {
-    id: 11,
+    id: 12,
     title: "Recruitment Platform Web App",
     category: "React",
     tech: ["ReactJs", "Python Django"],
@@ -99,7 +108,7 @@ const projects = [
     github: "",
   },
   {
-    id: 12,
+    id: 13,
     title: "Application Security Web App",
     category: "React",
     tech: ["ReactJs", "Tailwind CSS"],

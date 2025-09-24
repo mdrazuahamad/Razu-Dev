@@ -179,6 +179,7 @@ body {
 .menu-toggle span {
   width: 25px;
   height: 3px;
+  color: #000;
   background: #ffffff;
   border-radius: 3px;
 }
@@ -228,5 +229,27 @@ body {
   .nav-links {
     width: 300px;
     border-radius: 8px;
+  }
+  .logo img {
+    width: 150px;
+    height: auto;
+    cursor: pointer;
+  }
+  .nav-link-btn {
+    color: black !important;
+  }
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    right: 50px;
+    width: 70%;
+    max-height: 0;
+    overflow: hidden;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+    transition: max-height 0.3s ease;
+    padding: 0;
+    box-shadow: 0 4px 10px rgba(255, 123, 0, 0.178);
   }
 }
