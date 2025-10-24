@@ -1,8 +1,9 @@
-import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Autoplay } from "swiper/modules"; // <-- correct for Vite + Swiper 9
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+
 import "../assets/styles/TechStack.css";
 
 import { FaHtml5, FaCss3Alt, FaJs, FaReact } from "react-icons/fa";
@@ -25,8 +26,9 @@ const TechStackSlider = () => {
       <h2 className='slider-title'>Technologies I Use</h2>
 
       <Swiper
+        modules={[Navigation, Pagination, Autoplay]}
         loop={true}
-        navigation
+        navigation={true}
         pagination={{ clickable: true }}
         autoplay={{ delay: 2000, disableOnInteraction: false }}
         spaceBetween={30}
