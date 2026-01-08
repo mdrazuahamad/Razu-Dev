@@ -22,7 +22,7 @@ export const testimonials = [
     title: "CTO, InnovateHub",
   },
   {
-    name: "Michael Lee",
+    name: "Michael Le",
     message: "Creative solutions and great support throughout the project.",
     rating: 5,
     avatar: "/avatars/img 4.jpg",
